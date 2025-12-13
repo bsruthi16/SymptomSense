@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SymptomSense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>SymptomSense</h1>
+    <p class="subtitle">Health Symptom Self-Assessment</p>
+
+    <div class="card">
+        <h2>Enter Symptoms</h2>
+
+        <label>Choose Symptoms</label>
+        <select id="symptoms" multiple>
+            <option value="Fever">Fever</option>
+            <option value="Cough">Cough</option>
+            <option value="Headache">Headache</option>
+            <option value="Fatigue">Fatigue</option>
+            <option value="Sore Throat">Sore Throat</option>
+        </select>
+
+        <label>Severity Level</label>
+        <select id="severity">
+            <option value="Low">Low</option>
+            <option value="Moderate">Moderate</option>
+            <option value="High">High</option>
+        </select>
+
+        <button onclick="analyzeSymptoms()">Analyze</button>
+    </div>
+
+    <div class="card">
+        <h2>Result</h2>
+        <p id="result">No assessment yet.</p>
+    </div>
+
+    <div class="card">
+        <h2>Symptom History</h2>
+        <ul id="history"></ul>
+    </div>
+
+    <footer>
+        <p>⚠ This is not a medical diagnosis tool.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
