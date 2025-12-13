@@ -1,0 +1,15 @@
+# SymptomSense
+
+## Project Overview
+SymptomSense is a web-based health self-assessment application that helps users identify possible health conditions based on selected symptoms and severity levels. The system provides basic recommendations and maintains a history of symptom checks. This project is developed using HTML, CSS, and JavaScript and is intended for educational purposes only.
+
+## Domain
+Web Development / Health Informatics
+
+## Technologies Used
+HTML5  
+CSS3  
+JavaScript  
+
+## Project Structure
+Symptom
