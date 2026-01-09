@@ -1,65 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Sense</title>
 
-.container {
-    width: 90%;
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-}
+    <!-- CSS START -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
 
-h1 {
-    text-align: center;
-    color: #0077b6;
-}
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
 
-.subtitle {
-    text-align: center;
-    color: #555;
-}
+        p {
+            text-align: center;
+            color: #555;
+        }
 
-.card {
-    background: white;
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+        .container {
+            width: 350px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
 
-select {
-    width: 100%;
-    padding: 6px;
-    margin-top: 5px;
-}
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-button {
-    margin-top: 15px;
-    padding: 10px;
-    width: 100%;
-    background-color: #0077b6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-button:hover {
-    background-color: #005f8a;
-}
+        button:hover {
+            background-color: #217dbb;
+        }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
-    color: gray;
-}
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+    <!-- CSS END -->
+
+</head>
+
+<body>
+
+    <h1>Symptom Sense</h1>
+    <p>Identify health issues based on symptoms</p>
+
+    <div class="container">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Age</label>
+        <input type="number" placeholder="Enter your age">
+
+        <label>Symptoms</label>
+        <input type="checkbox"> Fever <br>
+        <input type="checkbox"> Cough <br>
+        <input type="checkbox"> Headache <br>
+        <input type="checkbox"> Fatigue <br>
+
+        <label>Additional Notes</label>
+        <textarea rows="3" placeholder="Describe symptoms"></textarea>
+
+        <button>Analyze Symptoms</button>
+    </div>
+
+    <p class="footer">
+        ⚠ This is not a medical diagnosis. Consult a doctor.
+    </p>
+
+</body>
+</html>
