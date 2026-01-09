@@ -1,42 +1,55 @@
-let historyList = [];
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Sense</title>
+</head>
+<body>
 
-function analyzeSymptoms() {
-    let symptomSelect = document.getElementById("symptoms");
-    let severity = document.getElementById("severity").value;
-    let result = document.getElementById("result");
-    let history = document.getElementById("history");
+<script>
+    // Change background
+    document.body.style.backgroundColor = "#f4f8fb";
+    document.body.style.fontFamily = "Arial";
 
-    let selectedSymptoms = [];
-    for (let option of symptomSelect.options) {
-        if (option.selected) {
-            selectedSymptoms.push(option.value);
-        }
-    }
+    // Create heading
+    let heading = document.createElement("h1");
+    heading.innerText = "Symptom Sense";
+    heading.style.textAlign = "center";
+    document.body.appendChild(heading);
 
-    if (selectedSymptoms.length === 0) {
-        result.textContent = "Please select at least one symptom.";
-        return;
-    }
+    // Create container
+    let box = document.createElement("div");
+    box.style.width = "350px";
+    box.style.margin = "auto";
+    box.style.backgroundColor = "white";
+    box.style.padding = "20px";
+    box.style.borderRadius = "10px";
+    document.body.appendChild(box);
 
-    let message = "Symptoms: " + selectedSymptoms.join(", ") +
-                  " | Severity: " + severity;
+    // Name input
+    let name = document.createElement("input");
+    name.placeholder = "Enter your name";
+    name.style.width = "100%";
+    name.style.marginBottom = "10px";
+    box.appendChild(name);
 
-    if (severity === "High") {
-        message += ". Recommendation: Consult a doctor immediately.";
-    } else if (severity === "Moderate") {
-        message += ". Recommendation: Monitor symptoms and rest.";
-    } else {
-        message += ". Recommendation: Home care advised.";
-    }
+    // Age input
+    let age = document.createElement("input");
+    age.placeholder = "Enter age";
+    age.style.width = "100%";
+    age.style.marginBottom = "10px";
+    box.appendChild(age);
 
-    result.textContent = message;
+    // Button
+    let btn = document.createElement("button");
+    btn.innerText = "Analyze Symptoms";
+    btn.style.width = "100%";
+    btn.style.padding = "10px";
+    btn.style.backgroundColor = "blue";
+    btn.style.color = "white";
+    btn.style.border = "none";
+    box.appendChild(btn);
+</script>
 
-    historyList.push(message);
-    history.innerHTML = "";
+</body>
+</html>
 
-    historyList.forEach(item => {
-        let li = document.createElement("li");
-        li.textContent = item;
-        history.appendChild(li);
-    });
-}
