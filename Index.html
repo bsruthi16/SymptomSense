@@ -2,52 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SymptomSense</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Symptom Sense</title>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; background-color: #f4f8fb;">
 
-<div class="container">
-    <h1>SymptomSense</h1>
-    <p class="subtitle">Health Symptom Self-Assessment</p>
+    <!-- Header -->
+    <h1 style="text-align:center; color:#2c3e50;">Symptom Sense</h1>
+    <p style="text-align:center;">
+        Identify possible health issues based on your symptoms
+    </p>
 
-    <div class="card">
-        <h2>Enter Symptoms</h2>
+    <!-- Main Container -->
+    <div style="
+        width: 400px;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    ">
 
-        <label>Choose Symptoms</label>
-        <select id="symptoms" multiple>
-            <option value="Fever">Fever</option>
-            <option value="Cough">Cough</option>
-            <option value="Headache">Headache</option>
-            <option value="Fatigue">Fatigue</option>
-            <option value="Sore Throat">Sore Throat</option>
-        </select>
+        <!-- Form -->
+        <form>
+            <label>Enter Your Name:</label><br>
+            <input type="text" placeholder="Your name"
+                   style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-        <label>Severity Level</label>
-        <select id="severity">
-            <option value="Low">Low</option>
-            <option value="Moderate">Moderate</option>
-            <option value="High">High</option>
-        </select>
+            <label>Age:</label><br>
+            <input type="number" placeholder="Age"
+                   style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-        <button onclick="analyzeSymptoms()">Analyze</button>
+            <label>Select Symptoms:</label><br>
+
+            <input type="checkbox"> Fever<br>
+            <input type="checkbox"> Cough<br>
+            <input type="checkbox"> Headache<br>
+            <input type="checkbox"> Sore Throat<br>
+            <input type="checkbox"> Fatigue<br><br>
+
+            <label>Additional Notes:</label><br>
+            <textarea rows="4" placeholder="Describe your symptoms"
+                      style="width:100%; padding:8px;"></textarea><br><br>
+
+            <button type="submit"
+                    style="
+                        width:100%;
+                        padding:10px;
+                        background-color:#3498db;
+                        color:white;
+                        border:none;
+                        border-radius:5px;
+                        font-size:16px;
+                    ">
+                Analyze Symptoms
+            </button>
+        </form>
+
     </div>
 
-    <div class="card">
-        <h2>Result</h2>
-        <p id="result">No assessment yet.</p>
-    </div>
+    <!-- Footer -->
+    <p style="text-align:center; margin-top:20px; font-size:14px;">
+        ⚠ This is not a medical diagnosis. Consult a doctor for accurate treatment.
+    </p>
 
-    <div class="card">
-        <h2>Symptom History</h2>
-        <ul id="history"></ul>
-    </div>
-
-    <footer>
-        <p>⚠ This is not a medical diagnosis tool.</p>
-    </footer>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
